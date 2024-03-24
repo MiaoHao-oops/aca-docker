@@ -1,4 +1,4 @@
-# ACA(Advanced Aomputer Architecture) Docker
+# ACA(Advanced Computer Architecture) Docker
 
 ## Quick Start
 
