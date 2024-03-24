@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# env
+IFLOW_BUILD_THREAD_NUM=$(cat /proc/cpuinfo | grep "processor" | wc -l)
+IFLOW_ROOT_DIR=/root/workspace
+IFLOW_SHELL_DIR=/root/workspace/scripts/shell
+IFLOW_TOOLS_DIR=/root/workspace/tools
+
+if [ $# == "0" ];then
+    IFLOW_MIRROR_URL="github.com"
+elif [ $# == "2" ] && [ $1 == "-mirror" ];then
+    IFLOW_MIRROR_URL=$2
+else
+    echo "please use './build_flow.sh -mirror <mirror url>' !"
+    exit
+fi
+
 git config --global --add safe.directory /root/workspace
 
 # update iFlow

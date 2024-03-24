@@ -28,10 +28,4 @@ RUN tar zxvf lemon-1.3.1.tar.gz
 RUN cd lemon-1.3.1 && cmake ./ && make -j$(nproc) && make install
 RUN rm -rf lemon-1.3.1*
 
-ENV IFLOW_BUILD_THREAD_NUM=$(nproc)
-ENV IFLOW_ROOT_DIR=/root/workspace
-ENV IFLOW_SHELL_DIR=${IFLOW_ROOT_DIR}/scripts/shell
-ENV IFLOW_TOOLS_DIR=${IFLOW_ROOT_DIR}/tools
-ENV IFLOW_MIRROR_URL="github.com"
-
 WORKDIR /root/workspace
