@@ -28,4 +28,4 @@ RUN tar zxvf lemon-1.3.1.tar.gz
 RUN cd lemon-1.3.1 && cmake ./ && make -j$(nproc) && make install
 RUN rm -rf lemon-1.3.1*
 
-WORKDIR /root/workspace
+WORKDIR /root/iFlow

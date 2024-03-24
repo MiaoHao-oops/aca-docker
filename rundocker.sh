@@ -8,4 +8,4 @@ fi
 # change the build script, because we have already install pre-builds in Dockerfile
 cp ./build_iflow.sh ./iFlow/build_iflow.sh
 docker build -t lab .
-docker run -it -v ./iFlow:/root/workspace lab /bin/bash
+docker run -it -v ./iFlow:/root/iFlow lab /bin/bash
