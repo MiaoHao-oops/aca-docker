@@ -28,4 +28,6 @@ RUN tar zxvf lemon-1.3.1.tar.gz
 RUN cd lemon-1.3.1 && cmake ./ && make -j$(nproc) && make install
 RUN rm -rf lemon-1.3.1*
 
+ENV LD_LIBRARY_PATH=/root/iFLow/tools/iEDA_0.1/lib
+
 WORKDIR /root/iFlow
