@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # env
-IFLOW_BUILD_THREAD_NUM=$(cat /proc/cpuinfo | grep "processor" | wc -l)
-IFLOW_ROOT_DIR=/root/iFlow
-IFLOW_SHELL_DIR=/root/iFlow/scripts/shell
-IFLOW_TOOLS_DIR=/root/iFlow/tools
+export IFLOW_BUILD_THREAD_NUM=$(cat /proc/cpuinfo | grep "processor" | wc -l)
+export IFLOW_ROOT_DIR=/root/iFlow
+export IFLOW_SHELL_DIR=/root/iFlow/scripts/shell
+export IFLOW_TOOLS_DIR=/root/iFlow/tools
 
 if [ $# == "0" ];then
-    IFLOW_MIRROR_URL="github.com"
+    export IFLOW_MIRROR_URL="github.com"
 elif [ $# == "2" ] && [ $1 == "-mirror" ];then
-    IFLOW_MIRROR_URL=$2
+    export IFLOW_MIRROR_URL=$2
 else
     echo "please use './build_flow.sh -mirror <mirror url>' !"
     exit
